@@ -1,6 +1,10 @@
 import { useState } from "react";
 
 export default function Quiz({ quiz }) {
+  if (!quiz || !quiz.questions) {
+    return <p>Quiz data not available</p>;
+  }
+
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);

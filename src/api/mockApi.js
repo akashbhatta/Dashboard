@@ -3,6 +3,7 @@ export const COURSES = [
   { id:"1", title:"React for Beginners", instructor:"Sarah Lee",
     description:"Learn React from scratch with hands-on projects.",
     thumbnail:"https://picsum.photos/seed/react/400/225",
+    image:"https://picsum.photos/seed/react/900/506",
     price:49, rating:4.8, students:1240, quizId:"q1",
     lessons:[
       {id:"l1",title:"Introduction to React",duration:"12 min",videoUrl:""},
@@ -13,6 +14,7 @@ export const COURSES = [
   { id:"2", title:"Node.js & Express API", instructor:"Mark Chen",
     description:"Build REST APIs with Node.js, Express, and MongoDB.",
     thumbnail:"https://picsum.photos/seed/node/400/225",
+    image:"https://picsum.photos/seed/node/900/506",
     price:59, rating:4.6, students:980, quizId:"q2",
     lessons:[
       {id:"l5",title:"Intro to Node.js",duration:"15 min",videoUrl:""},
@@ -22,6 +24,7 @@ export const COURSES = [
   { id:"3", title:"Python Data Science", instructor:"Priya Sharma",
     description:"Master pandas, numpy, matplotlib, and scikit-learn.",
     thumbnail:"https://picsum.photos/seed/python/400/225",
+    image:"https://picsum.photos/seed/python/900/506",
     price:69, rating:4.9, students:2100, quizId:"q3",
     lessons:[
       {id:"l8",title:"Python Basics",duration:"14 min",videoUrl:""},
@@ -55,4 +58,4 @@ export async function fetchLessonById(lessonId) {
   return null;
 }
 export async function fetchQuizById(quizId) { await delay(); return QUIZZES[quizId]||null; }
-export async function fetchEnrolledCourses(userId) { await delay(); return [COURSES[0],COURSES[2]]; }
+export async function fetchEnrolledCourses() { await delay(); return [COURSES[0],COURSES[2]]; }

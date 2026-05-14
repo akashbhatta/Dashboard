@@ -25,7 +25,7 @@ export default function CoursePage(){
             <Link to = "/">Courses</Link>
             <span>{course.title}</span>
             </nav>
-            <img src={course.image} alt={course.title} />
+            <img src={course.image || course.thumbnail} alt={course.title} />
             <h1>{course.title}</h1>
             <p>{course.description}</p>
             <p>By {course.instructor}</p>
@@ -37,7 +37,7 @@ export default function CoursePage(){
             }
             <LessonList lessons = {course.lessons}/>
             {user ? 
-                <Link to ={`/dashboard/quiz/${course.quizId}`}>Give Quiz</Link>
+                <Link to ={`/quiz/${course.quizId}`}>Give Quiz</Link>
             : <Link to = "/login">Login to give quiz</Link>
             }
         </main>

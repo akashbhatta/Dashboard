@@ -1,10 +1,11 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function CourseCard({course}) {
+  const image = course.thumbnail || course.image;
+
   return (
     <div>
-        <img src={course.image} alt={course.title} />
+        <img src={image} alt={course.title} />
         <div>
             <h3>{course.title}</h3>
             <p>{course.description}</p>
